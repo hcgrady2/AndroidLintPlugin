@@ -10,7 +10,7 @@ task installGitHooks(type: Copy) {
     println("==========installGitHook2222222s==============")
     from {
         println("==========installGitHooks==Copy===fr222222om=========")
-        new File(rootProject.rootDir, 'hooks/pre-commit')
+        new File(rootProject.rootDir, 'pre-commit')
     }
     into {
         println("==========installGitHooks==Copy===into22222222=========")
