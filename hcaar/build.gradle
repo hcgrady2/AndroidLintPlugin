@@ -25,6 +25,36 @@ android {
 
 }
 
+configurations {
+    lintChecks
+}
+
+dependencies {
+    //设置lint依赖 -> lint.jar
+    lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
+}
+
+task copyLintJar(type: Copy) {
+    from (configurations.lintChecks) {
+        rename {
+            String filename ->
+                "lint.jar"
+        }
+    }
+    into "$buildDir/intermediates/lint/"
+}
+
+project.afterEvaluate {
+    def compileLintTask = project.tasks.find {
+        //println("task name:$it.name")
+        it.name == "prepareLintJar"
+    }
+    compileLintTask.dependsOn(copyLintJar)
+}
+
+
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
