@@ -9,6 +9,7 @@ dependencies {
 
     compileOnly 'com.android.tools.lint:lint-api:26.4.2'
     compileOnly 'com.android.tools.lint:lint-checks:26.4.2'
+    compileOnly 'com.android.tools.lint:lint:26.4.2'
 
 }
 
