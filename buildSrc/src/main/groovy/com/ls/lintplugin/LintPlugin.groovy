@@ -12,7 +12,7 @@ class LintPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         project.extensions.create("lintConfig", LintConfig.class)
-        project.task("lintCheck") << {
+        project.task("lintCheck"){
             println("=========== Lint check start ==============")
 
             String[] filenamePostfix
