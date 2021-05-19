@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
 
 android {
     compileSdkVersion 30
@@ -31,3 +33,29 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+
+
+
+uploadArchives {
+
+    repositories {
+
+        mavenDeployer {
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            //本地的Maven地址:当前工程下
+            repository(url: uri('./test-plugin'))
+
+            pom.groupId = "android.library"
+            pom.artifactId = "dida-aar"
+            pom.version = "1.0.1-SNAPSHOT"
+            pom.packaging = "aar"
+
+        }
+
+    }
+}
+
