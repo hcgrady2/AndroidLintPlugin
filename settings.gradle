@@ -1,3 +1,4 @@
 rootProject.name='TestAAR'
 include ':app'
 include ':hcaar'
+include ':lintJavaLIb'
