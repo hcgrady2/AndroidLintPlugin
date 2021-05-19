@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Log.d("", "'");
+        Log.d("", "'");
+        System.out.print("ddd");
+
+        Message msg23 = new Message();
+
+
+
+
 
 
     }
