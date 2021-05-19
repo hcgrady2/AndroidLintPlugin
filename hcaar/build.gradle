@@ -63,7 +63,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
+   // lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
     lintPublish project(':lintJavaLIb')
 
 }
@@ -84,7 +84,7 @@ uploadArchives {
             repository(url: uri('./test-plugin'))
 
             pom.groupId = "android.library"
-            pom.artifactId = "dida-aar"
+            pom.artifactId = "dida-lib"
             pom.version = "1.0.1-SNAPSHOT"
             pom.packaging = "aar"
 

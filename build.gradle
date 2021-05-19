@@ -5,7 +5,13 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
+        //lint gradle plugin
+        maven {
+            url uri('/Users/wangxiaomai/Project/TestAAR/hcaar/test-plugin')
+        }
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.0'
@@ -20,7 +26,15 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
+        //lint gradle plugin
+        maven {
+            url uri('/Users/wangxiaomai/Project/TestAAR/hcaar/test-plugin')
+        }
+
+
+
+
     }
 }
 

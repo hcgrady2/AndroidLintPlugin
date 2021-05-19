@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>android.library</groupId>
-  <artifactId>dida-aar</artifactId>
+  <artifactId>dida-lib</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>aar</packaging>
   <dependencies>
