@@ -44,6 +44,7 @@ task clean(type: Delete) {
 
 //
 apply plugin: "lintplugin"
+//test
 //
 //lintConfig {
 //    //配置Lint检查文件的类型
@@ -51,3 +52,4 @@ apply plugin: "lintplugin"
 //    //是否将检查文件的所有扫描结果都输出
 //    lintReportAll = true
 //}
+//test

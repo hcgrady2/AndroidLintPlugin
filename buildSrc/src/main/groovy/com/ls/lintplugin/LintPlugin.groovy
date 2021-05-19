@@ -11,6 +11,9 @@ class LintPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
+        println("=========== start to apply gradle plugin ==============")
+
+
         project.extensions.create("lintConfig", LintConfig.class)
         project.task("lintCheck"){
             println("=========== Lint check start ==============")
@@ -101,6 +104,8 @@ class LintPlugin implements Plugin<Project> {
             if (OSType.contains("Windows")) {
                 postCommit = new File(project.rootDir, "post-commit-windows")
             } else {
+                println("============ mac 安装脚本  ===============")
+
                 postCommit = new File(project.rootDir, "post-commit")
             }
 
