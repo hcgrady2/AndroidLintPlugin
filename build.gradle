@@ -14,7 +14,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.0'
+        classpath 'com.android.tools.build:gradle:3.4.0'
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -43,7 +43,7 @@ task clean(type: Delete) {
 }
 
 //
-//apply plugin: "lintplugin"
+apply plugin: "lintplugin"
 //
 //lintConfig {
 //    //配置Lint检查文件的类型

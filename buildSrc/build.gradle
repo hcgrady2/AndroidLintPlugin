@@ -3,14 +3,14 @@ apply plugin: 'groovy'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-//    implementation 'com.android.tools.lint:lint-api:26.3.2'
-//    implementation 'com.android.tools.lint:lint-checks:26.3.2'
-//    implementation 'com.android.tools.lint:lint:26.3.2'
+    implementation 'com.android.tools.lint:lint-api:26.3.2'
+    implementation 'com.android.tools.lint:lint-checks:26.3.2'
+    implementation 'com.android.tools.lint:lint:26.3.2'
 
     //用 compile 报错,implementation 也报错，，必须用 compileOnly
-    compileOnly 'com.android.tools.lint:lint-api:26.4.2'
-    compileOnly 'com.android.tools.lint:lint-checks:26.4.2'
-    compileOnly 'com.android.tools.lint:lint:26.4.2'  //必须要有这个依赖
+//    compileOnly 'com.android.tools.lint:lint-api:26.4.2'
+//    compileOnly 'com.android.tools.lint:lint-checks:26.4.2'
+//    compileOnly 'com.android.tools.lint:lint:26.4.2'  //必须要有这个依赖
 
     /*implementation 'com.android.tools.build:gradle:3.3.2'
     implementation 'com.android.tools.build:gradle-api:3.3.2'*/

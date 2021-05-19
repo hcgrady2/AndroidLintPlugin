@@ -2,113 +2,12 @@
 +++++++++++++++++++++++++++++++++++ Lint扫描结果 ++++++++++++++++++++++++++++++++++++
 ====================================================================================
 
-Lint检查日期: Wed May 19 18:47:32 CST 2021
+Lint检查日期: Wed May 19 20:38:37 CST 2021
 
-(1)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 9
-Error: 请添加正确的类注释 [ClassComment]
-问题代码: public class MainActivity extends AppCompatActivity {
-             ~~~~~~~~~~~~
-
-请根据以下提示修改.
-===================================Issue说明========================================
-
-   关于 Lint Issue "ClassComment"的说明
-   每个类都需要注释，其内容包含描述、作者、日期，可以在 AS 中加入你喜欢的模板
-   /
-    * Author : 
-    * Time ：
-    * Desc ：
-    */
-
-==================================== end ==========================================
-
-
-(2)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 20
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(3)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 21
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(4)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 22
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         System.out.print("ddd");
-        ~~~~~~~~~~~~~~~~~~~~~~~
-(5)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 29
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(6)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 30
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(7)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 31
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         System.out.print("ddd");
-        ~~~~~~~~~~~~~~~~~~~~~~~
-(8)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 40
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(9)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 41
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         Log.d("", "'");
-        ~~~~~~~~~~~~~~
-(10)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 42
-Error: 应该使用项目中的Log工具! [Log]
-问题代码:         System.out.print("ddd");
-        ~~~~~~~~~~~~~~~~~~~~~~~
-
-请根据以下提示修改.
-===================================Issue说明========================================
-
-   关于 Lint Issue "Log"的说明
-   避免在项目中直接使用android.log以及system.out
-
-==================================== end ==========================================
-
-
-(11)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 24
-Warning: 避免直接使用new Message() [Message_Obtain_Tip]
-问题代码:         Message msg2 = new Message();
-                       ~~~~~~~~~~~~~
-(12)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 33
-Warning: 避免直接使用new Message() [Message_Obtain_Tip]
-问题代码:         Message msg24 = new Message();
-                        ~~~~~~~~~~~~~
-(13)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 44
-Warning: 避免直接使用new Message() [Message_Obtain_Tip]
-问题代码:         Message msg = new Message();
-                      ~~~~~~~~~~~~~
-
-请根据以下提示修改.
-===================================Issue说明========================================
-
-   关于 Lint Issue "Message_Obtain_Tip"的说明
-   为了减少内存开销,不应该直接使用{new Message()},应该使用 {handler.obtainMessage()方法} 或者
-   {Message.obtain()方法},这样的话从整个Message池中返回一个新的Message实例,从而能够避免重复Message创建对象,减少
-   内存开销.
-
-==================================== end ==========================================
-
-
+没有扫描结果
 
 
 ====================================================================================
-+++++++++++++++++++ 共发现13个Issue,请根据Issue说明的提示信息修改.++++++++++++++++++++++++
++++++++++++++++++++ 共发现0个Issue,请根据Issue说明的提示信息修改.++++++++++++++++++++++++
 ====================================================================================
 
