@@ -135,6 +135,9 @@ class LintPlugin implements Plugin<Project> {
      * @return 文件名
      */
     static List<String> getCommitChange(Project project) {
+
+        println("start to getCommit change 000>>>>>")
+        println("start to getCommit file path" + project.getRootDir())
         ArrayList<String> filterList = new ArrayList<>()
         try {
             //此命令获取本次提交的文件 在git commit之后执行
@@ -145,6 +148,8 @@ class LintPlugin implements Plugin<Project> {
             }
 
             String[] lines = changeInfo.split("\\n")
+            println("start to getCommit change size : >>>>>" +lines.length)
+
             return lines.toList()
         } catch (Exception e) {
             e.printStackTrace()

@@ -43,7 +43,8 @@ task clean(type: Delete) {
 }
 
 //
-apply plugin: "lintplugin"
+apply plugin: "mylintplugin"
+//test
 lintConfig {
     //配置Lint检查文件的类型
     lintCheckFileType = ".java,.xml"
