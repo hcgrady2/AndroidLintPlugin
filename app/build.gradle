@@ -22,33 +22,6 @@ android {
         }
     }
 
-
-
-// 额外添加的，在build之前检查一下githook脚本是否存在
-    afterEvaluate {
-        tasks.matching {
-            it.name.equals("preBuild")
-        }.each {
-            it.doFirst {
-                println("准备 chomd")
-                exec {
-                    executable 'chmod'
-                    args 777, 'installGitHook.sh'
-                }
-
-                exec {
-                    executable 'chmod'
-                    args 777, 'pre-commit.sh'
-                }
-
-                exec {
-                    executable ('installGitHook.sh')
-                }
-            }
-        }
-    }
-
-    //test
 }
 
 dependencies {
