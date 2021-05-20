@@ -43,7 +43,7 @@ task clean(type: Delete) {
 }
 
 //
-apply plugin: "lintplugin"
+//apply plugin: "lintplugin"
 //test
 //
 //lintConfig {
@@ -53,3 +53,30 @@ apply plugin: "lintplugin"
 //    lintReportAll = true
 //}
 //test
+
+
+//test
+//apply plugin: 'GitHooksPlugin'
+//tes
+//gitHooks {
+//
+//    gitRootPath rootProject.rootDir.absolutePath
+//
+//    commit {
+//        // git commit 强制规范
+//        regex "^(新增：|特性：|：合并：|Lint：|Sonar：|优化：|Test：|合版：|发版：|Fix：|依赖库：|解决冲突：)"
+//        // 对应提交规范具体说明文档
+//        docUrl "http://xxxx"
+//
+//        // git commit 必须使用公司邮箱
+//        emailSuffix "@corn.com"
+//    }
+//
+//}
+//
+
+
+//这个名字是 properties 的名字，具体的 plugin 由这个文件指定 。
+//test gradle plugin
+//test
+apply plugin: "lintplugin"

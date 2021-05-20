@@ -19,6 +19,9 @@ dependencies {
     implementation gradleApi()
     implementation localGroovy()
 
+    compile gradleApi()
+    compile localGroovy()
+
 
 }
 
