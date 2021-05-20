@@ -11,20 +11,10 @@ class LintPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
-        println("=========== start to apply gradle plugin ==============")
 
 
         project.extensions.create("lintConfig", LintConfig.class)
         project.task("lintCheck"){
-            println("=========== Lint check start ==============")
-
             String[] filenamePostfix
             if (project.lintConfig != null) {
                 String fileType = project.lintConfig.lintCheckFileType

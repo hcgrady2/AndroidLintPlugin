@@ -2,21 +2,24 @@
 +++++++++++++++++++++++++++++++++++ Lint扫描结果 ++++++++++++++++++++++++++++++++++++
 ====================================================================================
 
-Lint检查日期: Thu May 20 14:07:05 CST 2021
+Lint检查日期: Thu May 20 15:07:33 CST 2021
 
 (1)文件名: java/com/hc/testaar/MainActivity.java
-问题行号: 39
-Warning: 避免直接使用new Message() [Message_Obtain_Tip]
-问题代码:         Message msg23 = new Message();
-                        ~~~~~~~~~~~~~
+问题行号: 12
+Error: 请添加正确的类注释 [ClassComment]
+问题代码: public class MainActivity extends AppCompatActivity {
+             ~~~~~~~~~~~~
 
 请根据以下提示修改.
 ===================================Issue说明========================================
 
-   关于 Lint Issue "Message_Obtain_Tip"的说明
-   为了减少内存开销,不应该直接使用{new Message()},应该使用 {handler.obtainMessage()方法} 或者
-   {Message.obtain()方法},这样的话从整个Message池中返回一个新的Message实例,从而能够避免重复Message创建对象,减少
-   内存开销.
+   关于 Lint Issue "ClassComment"的说明
+   每个类都需要注释，其内容包含描述、作者、日期，可以在 AS 中加入你喜欢的模板
+   /
+    * Author : 
+    * Time ：
+    * Desc ：
+    */
 
 ==================================== end ==========================================
 
