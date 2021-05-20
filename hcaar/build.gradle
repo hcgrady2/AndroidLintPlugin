@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
-
+//apply plugin: 'maven'
+//tes
 
 android {
     compileSdkVersion 30
@@ -24,35 +24,35 @@ android {
     }
 
 }
-
-configurations {
-    lintChecks
-}
-
-dependencies {
-    //设置lint依赖 -> lint.jar
-    lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
-}
-
-task copyLintJar(type: Copy) {
-    from (configurations.lintChecks) {
-        rename {
-            String filename ->
-                "lint.jar"
-        }
-    }
-    into "$buildDir/intermediates/lint/"
-}
-
-project.afterEvaluate {
-    def compileLintTask = project.tasks.find {
-        //println("task name:$it.name")
-        it.name == "prepareLintJar"
-    }
-    compileLintTask.dependsOn(copyLintJar)
-}
-
-
+//
+//configurations {
+//    lintChecks
+//}
+//
+//dependencies {
+//    //设置lint依赖 -> lint.jar
+//    lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
+//}
+//
+//task copyLintJar(type: Copy) {
+//    from (configurations.lintChecks) {
+//        rename {
+//            String filename ->
+//                "lint.jar"
+//        }
+//    }
+//    into "$buildDir/intermediates/lint/"
+//}
+//
+//project.afterEvaluate {
+//    def compileLintTask = project.tasks.find {
+//        //println("task name:$it.name")
+//        it.name == "prepareLintJar"
+//    }
+//    compileLintTask.dependsOn(copyLintJar)
+//}
+//
+//
 
 
 dependencies {
@@ -64,32 +64,32 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
    // lintChecks project(path: ":lintJavaLIb", configuration: "lintChecks")
-    lintPublish project(':lintJavaLIb')
+    //lintPublish project(':lintJavaLIb')
 
 }
 
+//tes
 
-
-
-uploadArchives {
-
-    repositories {
-
-        mavenDeployer {
-            //提交到远程服务器：
-            // repository(url: "http://www.xxx.com/repos") {
-            //    authentication(userName: "admin", password: "admin")
-            // }
-            //本地的Maven地址:当前工程下
-            repository(url: uri('./test-plugin'))
-
-            pom.groupId = "android.library"
-            pom.artifactId = "dida-lib"
-            pom.version = "1.0.1-SNAPSHOT"
-            pom.packaging = "aar"
-
-        }
-
-    }
-}
-
+//
+//uploadArchives {
+//
+//    repositories {
+//
+//        mavenDeployer {
+//            //提交到远程服务器：
+//            // repository(url: "http://www.xxx.com/repos") {
+//            //    authentication(userName: "admin", password: "admin")
+//            // }
+//            //本地的Maven地址:当前工程下
+//            repository(url: uri('./test-plugin'))
+//
+//            pom.groupId = "android.library"
+//            pom.artifactId = "dida-lib"
+//            pom.version = "1.0.1-SNAPSHOT"
+//            pom.packaging = "aar"
+//
+//        }
+//
+//    }
+//}
+//

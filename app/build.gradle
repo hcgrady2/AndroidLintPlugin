@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply from: rootProject.file('install-git-hooks.gradle')
+//apply from: rootProject.file('install-git-hooks.gradle')
 
 android {
     compileSdkVersion 30
@@ -60,6 +60,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
    //implementation project(path: ':hcaar')
-    implementation('android.library:dida-lib:1.0.1-SNAPSHOT') { changing = true }
+   // implementation('android.library:dida-lib:1.0.1-SNAPSHOT') { changing = true }
 
 }
