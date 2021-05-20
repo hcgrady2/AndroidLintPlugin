@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
 
+/**
+ * test
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,34 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("", "'");
-        Log.d("", "'");
-        System.out.print("ddd");
-
-        Message msg = new Message();
-
-
-
-
-
-        Log.d("", "'");
-        Log.d("", "'");
-        System.out.print("ddd");
-
-        Message msg2 = new Message();
-
-
-
-
-        Log.d("", "'");
-        Log.d("", "'");
-        System.out.print("ddd");
-
-        Message msg23 = new Message();
-
-
-
-        //test
 
 
     }
