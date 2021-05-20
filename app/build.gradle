@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//apply from: rootProject.file('install-git-hooks.gradle')
+apply from: rootProject.file('install-git-hooks.gradle')
 
 android {
     compileSdkVersion 30
@@ -35,4 +35,14 @@ dependencies {
    //implementation project(path: ':hcaar')
    // implementation('android.library:dida-lib:1.0.1-SNAPSHOT') { changing = true }
 
+
 }
+
+
+
+tasks.create(name: 'gitExecutableHooks') {
+    Runtime.getRuntime().exec("chmod -R +x .git/hooks/");
+}
+//test
+gitExecutableHooks.dependsOn installGitHooks
+clean.dependsOn gitExecutableHooks

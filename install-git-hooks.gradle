@@ -7,19 +7,19 @@
 
 
 task installGitHooks(type: Copy) {
-    println("==========installGitHook2222222s==============")
-    from {
-        println("==========installGitHooks==Copy===fr222222om=========")
-        new File(rootProject.rootDir, 'pre-commit')
-    }
+    from new File(rootProject.rootDir, 'post-commit')
+
     into {
-        println("==========installGitHooks==Copy===into22222222=========")
         new File(rootProject.rootDir, '.git/hooks')
     }
     File file = new File(rootProject.rootDir, '.git/post-commit')
     file.setExecutable(true, false)
+    //File file2 = new File(rootProject.rootDir, '.git/pre-commit')
+    //file2.setExecutable(true, false)
+
 }
 
-clean.dependsOn installGitHooks
+//clean.dependsOn installGitHooks
+build.dependsOn installGitHooks
 //Could not find method execute() for arguments [] on task ':installGitHooks' of type org.gradle.api.tasks.Copy.
 //installGitHooks.execute()
