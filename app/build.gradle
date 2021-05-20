@@ -22,6 +22,27 @@ android {
         }
     }
 
+
+
+// 额外添加的，在build之前检查一下githook脚本是否存在
+    afterEvaluate {
+        tasks.matching {
+            it.name.equals("preBuild")
+        }.each {
+            it.doFirst {
+                println("准备 chomd")
+                exec {
+                    executable 'chmod'
+                    args 777, 'githook/installGitHook.sh'
+                }
+                exec {
+                    executable ('githook/installGitHook.sh')
+                }
+            }
+        }
+    }
+
+    //test
 }
 
 dependencies {
@@ -35,21 +56,4 @@ dependencies {
    //implementation project(path: ':hcaar')
     implementation('android.library:dida-lib:1.0.1-SNAPSHOT') { changing = true }
 
-}
-
-// 额外添加的，在build之前检查一下githook脚本是否存在
-afterEvaluate {
-    tasks.matching {
-        it.name.equals("preBuild")
-    }.each {
-        it.doFirst {
-            exec {
-                executable 'chmod'
-                args 777, 'githook/installGitHook.sh'
-            }
-            exec {
-                executable ('githook/installGitHook.sh')
-            }
-        }
-    }
 }
