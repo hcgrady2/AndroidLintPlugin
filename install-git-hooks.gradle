@@ -7,12 +7,12 @@
 
 
 task installGitHooks(type: Copy) {
-    from new File(rootProject.rootDir, 'post-commit')
+    from new File(rootProject.rootDir, 'pre-commit.sh')
 
     into {
         new File(rootProject.rootDir, '.git/hooks')
     }
-    File file = new File(rootProject.rootDir, '.git/post-commit')
+    File file = new File(rootProject.rootDir, '.git/pre-commit.sh')
     file.setExecutable(true, false)
     //File file2 = new File(rootProject.rootDir, '.git/pre-commit')
     //file2.setExecutable(true, false)
