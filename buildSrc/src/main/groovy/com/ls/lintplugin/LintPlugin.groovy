@@ -12,6 +12,13 @@ class LintPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
+        println("=========== start to apply gradle plugin ==============")
 
 
         project.extensions.create("lintConfig", LintConfig.class)

@@ -43,16 +43,14 @@ task clean(type: Delete) {
 }
 
 //
-//apply plugin: "lintplugin"
-//test
-//
-//lintConfig {
-//    //配置Lint检查文件的类型
-//    lintCheckFileType = ".java,.xml"
-//    //是否将检查文件的所有扫描结果都输出
-//    lintReportAll = true
-//}
-//test
+apply plugin: "lintplugin"
+lintConfig {
+    //配置Lint检查文件的类型
+    lintCheckFileType = ".java,.xml"
+    //是否将检查文件的所有扫描结果都输出
+    lintReportAll = true
+}
+
 
 
 //test
@@ -78,5 +76,6 @@ task clean(type: Delete) {
 
 //这个名字是 properties 的名字，具体的 plugin 由这个文件指定 。
 //test gradle plugin
-//test
-apply plugin: "lintplugin"
+//test git hook plugin
+//test lint gradle plugin
+//apply plugin: "lintplugin"
