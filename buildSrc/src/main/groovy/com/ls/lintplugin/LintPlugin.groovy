@@ -109,18 +109,18 @@ class LintPlugin implements Plugin<Project> {
             File postCommit
             String OSType = System.getProperty("os.name")
             if (OSType.contains("Windows")) {
-                postCommit = new File(project.rootDir, "pre-commit.sh-windows")
+                postCommit = new File(project.rootDir, "pre-commit-windows")
             } else {
                 println("============ mac 安装脚本  ===============")
 
-                postCommit = new File(project.rootDir, "pre-commit.sh")
+                postCommit = new File(project.rootDir, "pre-commit")
             }
 
             project.copy {
                 from (postCommit) {
                     rename {
                         String filename ->
-                            "pre-commit.sh"
+                            "pre-commit"
                     }
                 }
                 into new File(project.rootDir, ".git/hooks/")

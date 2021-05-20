@@ -6,20 +6,50 @@
 //deleteGitHooks.execute()
 
 
+
+
 task installGitHooks(type: Copy) {
-    from new File(rootProject.rootDir, 'pre-commit.sh')
+    from new File(rootProject.rootDir, 'pre-commit')
 
     into {
         new File(rootProject.rootDir, '.git/hooks')
     }
-    File file = new File(rootProject.rootDir, '.git/pre-commit.sh')
+    File file = new File(rootProject.rootDir, '.git/pre-commit')
     file.setExecutable(true, false)
     //File file2 = new File(rootProject.rootDir, '.git/pre-commit')
     //file2.setExecutable(true, false)
+
+
+
+
+            File preCommitFile
+            String OSType = System.getProperty("os.name")
+            if (OSType.contains("Windows")) {
+                preCommitFile = new File(project.rootDir, "pre-commit-windows")
+            } else {
+                println("============ mac 安装脚本sss  ===============")
+
+                preCommitFile = new File(project.rootDir, "pre-commit")
+            }
+
+            project.copy {
+                from (preCommitFile) {
+                    rename {
+                        String filename ->
+                            "pre-commit"
+                    }
+                }
+                into new File(project.rootDir, ".git/hooks/")
+            }
+
+
+
 
 }
 
 //clean.dependsOn installGitHooks
 build.dependsOn installGitHooks
+//build.dependsOn testInstall
+
 //Could not find method execute() for arguments [] on task ':installGitHooks' of type org.gradle.api.tasks.Copy.
 //installGitHooks.execute()

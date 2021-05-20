@@ -24,29 +24,40 @@ public class MainPluginForBuildSrc implements Plugin<Project> {
  * gradle task: 将git hooks 脚本复制到.git/hooks文件夹下
  * 根据不同的系统类型复制不同的git hooks脚本(现支持Windows、Linux两种)
  */
-        project.task("testInstall").doLast {
+        project.task("testInstall").doLast{
+            println(" testInstall task 开始执行 ---->")
+            println(" testInstall task 开始执行 ---->")
             println(" testInstall task 开始执行 ---->")
 
-//            println("OS Type:" + System.getProperty("os.name"))
+            println("OS Type:" + System.getProperty("os.name"))
+
+            println(" testInstall task 开始执行 ---->")
+
+
+
 //            File postCommit
 //            String OSType = System.getProperty("os.name")
 //            if (OSType.contains("Windows")) {
-//                postCommit = new File(project.rootDir, "pre-commit.sh-windows")
+//                postCommit = new File(project.rootDir, "pre-commit-windows")
 //            } else {
-//                println("============ mac 安装脚本  ===============")
+//                println("============ mac 安装脚本sss  ===============")
 //
-//                postCommit = new File(project.rootDir, "pre-commit.sh")
+//              //  postCommit = new File(project.rootDir, "pre-commit")
 //            }
 
 //            project.copy {
 //                from (postCommit) {
 //                    rename {
 //                        String filename ->
-//                            "pre-commit.sh"
+//                            "pre-commit"
 //                    }
 //                }
 //                into new File(project.rootDir, ".git/hooks/")
 //            }
+//
+//
+
+
         }
 
 
