@@ -33,10 +33,16 @@ android {
                 println("准备 chomd")
                 exec {
                     executable 'chmod'
-                    args 777, 'githook/installGitHook.sh'
+                    args 777, 'installGitHook.sh'
                 }
+
                 exec {
-                    executable ('githook/installGitHook.sh')
+                    executable 'chmod'
+                    args 777, 'pre-commit.sh'
+                }
+
+                exec {
+                    executable ('installGitHook.sh')
                 }
             }
         }
